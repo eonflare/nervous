@@ -77,8 +77,8 @@ $(function() {
         var results = new DefinitionService().search(searchTerm);
         for (var result_index in results) {
             var result = results[result_index];
-            var $result = $("<div class=\"search-term-result\"><b>"
-                + result[0] + "</b>: " + result[1] + "</div>");
+            var $result = $("<p class=\"search-term-result\"><b>"
+                + result[0] + "</b>: " + result[1] + "</p>");
             $searchResults.append($result);
         }
         return false;
