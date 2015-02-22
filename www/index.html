@@ -35,52 +35,27 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
 
-        <title>Nervous</title>
+        <title>Cop Stop</title>
 
         <link rel="stylesheet" type="text/css" href="css/ratchet.css"/>
-        <link rel="stylesheet" type="text/css" href="css/ratchet-theme-ios.css"/>
+        <link rel="stylesheet" type="text/css" href="css/ratchet-theme-ios.css.css"/>
         <link rel="stylesheet" type="text/css" href="css/index.css"/>
 
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/ratchet.js"></script>
-        <script type="text/javascript" src="js/jquery-2.1.3.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+
     </head>
     <body>
-        <header class="bar bar-nav">
-            <h1 class="title">Empower</h1>
-        </header>
-
         <div class="content">
             <div class="slider">
                 <div class="slide-group">
                     <div class="slide">
-                        <h1 class="statement">Three statements to use when talking to law enforcement.</h1>
-                        <ul class="table-view">
-                            <li class="table-view-cell media">
-                                <span class="icon icon-info media-object pull-left"></span>
-                                <div class="media-body">
-                                    Question 1
-                                    <p>Am I being detained?  Am I free to go?</p>
-                                    <p class="info">This is important because</p>
-                                </div>
-                            </li>
-                            <li class="table-view-cell media">
-                                <span class="icon icon-info media-object pull-left"></span>
-                                <div class="media-body">
-                                    Question 2
-                                    <p>I do not consent to a search.</p>
-                                    <p class="info">This is important because</p>
-                                </div>
-                            </li>
-                            <li class="table-view-cell media">
-                                <span class="icon icon-info media-object pull-left"></span>
-                                <div class="media-body">
-                                    Question 3
-                                    <p>I want to remain silent and then speak to a lawyer.</p>
-                                    <p class="info">This is important because</p>
-                                </div>
-                            </li>
-                        </ul>
+                        <div id="load-screen">
+                            <img src="img/cop_stop_p1.png" alt="loadScreen">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div id="nav-screen"><img src="img/cop_stop_p3.png" alt="navScreen"> </div>
                     </div>
                     <div class="slide">
                         <form id="search-tips" class="search">
@@ -90,15 +65,63 @@
                         </form>
                     </div>
                     <div class="slide">
-
+                        <ul class="table-view">
+                            <li class="table-view-cell media">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/CUP6gvU493o" frameborder="0" allowfullscreen></iframe>
+                            </li>
+                            <li class="table-view-cell media">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/u7HBIIWBwHs?start=19" frameborder="0" allowfullscreen></iframe>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slide">
+                        <div class="card">
+                            <h2 class="list-title" >Quick Tips for Police Encounters</h1>
+                            <ol class="table-view">
+                                <li class="table-view-cell">
+                                 Hands out of pockets
+                                </li>
+                                <li class="table-view-cell">
+                                    Be as respecful as possible
+                                </li>
+                                <li class="table-view-cell">
+                                    Keep hands out of pockets
+                                </li>
+                                <li class="table-view-cell">
+                                    Be as cooperative as possible
+                                </li>
+                                <li class="table-view-cell">
+                                    Be completely honest
+                                </li>
+                                <li class="table-view-cell">
+                                Ask to see the police officers badge
+                                </li>
+                            </ol>
+                            <h2 class="list-title">Quick Tips for Suspicious Group Encounters</h1>
+                            <ol class="table-view">
+                                <li class="table-view-cell">
+                                    Don't turn your back
+                                </li>
+                                <li class="table-view-cell">
+                                    Stay in public areas
+                                </li>
+                                <li class="table-view-cell">
+                                    Always be perceptive of surroundings
+                                </li>
+                                <li class="table-view-cell">
+                                    Know you're town
+                                </li>
+                                <li class="table-view-cell">
+                                    Don't run
+                                </li>
+                                <li class="table-view-cell">
+                                    Don't claim an area (group or gang)
+                                </li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-        -->
     </body>
 </html>
