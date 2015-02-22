@@ -173,12 +173,6 @@ h1 {
 #search-tips {
     position: relative;
 }
-#searchResults {
-    position: absolute;
-    top: 50px;
-    z-index: 100;
-    width: 100%;
-}
 .media-body .info {
     max-height: 0px;
     transition: max-height 0.5s ease;
