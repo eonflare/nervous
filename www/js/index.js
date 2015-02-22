@@ -49,28 +49,45 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-function DefinitionService() {
-    this.definitions = {
-        "gangs": "Group of suspicious members of the community ",
-        "loitering": "Aimlessly hanging around private property"
-    }
-}
+function DefinitionService() {};
 
-DefinitionService.prototype.search = function(term){
+DefinitionService.prototype.definitions = {
+    "gangs": "Group of suspicious members of the community ",
+    "loitering": "Aimlessly hanging around private property"
+};
+
+DefinitionService.prototype.search = function(term) {
     var results = [];
+    if (!term.length) return;
     for (definition in this.definitions) {
-        if(definition.indexOf(term) >=0) {
+        if (definition.match(new RegExp(term, 'i'))) {
             results.push([definition, this.definitions[definition]])
         }
     }
-
     return results;
 }
 
 $(function() {
+    // Store the div with id searchResults
+    var $searchResults = $("#searchResults");
     $("#search-tips").submit(function (eventData) {
+        eventData.preventDefault();
+        $searchResults.empty();
         var searchTerm = $("#search-tips > input").val();
-        window.alert(new DefinitionService().search(searchTerm));
+        var results = new DefinitionService().search(searchTerm);
+        for (var result_index in results) {
+            var result = results[result_index];
+            var $result = $("<div class=\"search-term-result\"><b>"
+                + result[0] + "</b>: " + result[1] + "</div>");
+            $searchResults.append($result);
+        }
+        return false;
+    });
+    $("#search-tips > input").blur(function() {
+        $searchResults.empty();
+    });
+    $('.media-body').click(function() {
+        $(this).toggleClass('open');
     });
 });
 

@@ -181,3 +181,34 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+#search-tips {
+    position: relative;
+}
+#searchResults {
+    position: absolute;
+    top: 50px;
+    z-index: 100;
+    width: 100%;
+}
+.media-body .info {
+    max-height: 0px;
+    transition: max-height 0.5s ease;
+}
+.media-body.open .info {
+    max-height: 300px;
+}
+.search-term-result {
+    border: 1px solid white;
+    border-radius: 4px;
+    border-top: none;
+    color: #c4c4c4;
+    padding: 5px;
+    text-align: center;
+}
+.search-term-result b {
+    color: white;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.1em;
+}
