@@ -49,3 +49,19 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+  function DefinitionService() {
+      this.definitions = {
+          "gangs": "Group of suspicious members of the community ",
+          "loitering":"Aimlessly hanging around private property"
+      }
+  }
+ DefinitionService.prototype.search = function(term){
+     var results = [];
+     for (definition in this.definitions) {
+         if(definition.indexOf(term) >=0) {
+             results.push([definition, definitions[definition]])
+         }
+     }
+     return results;
+ }
+window.alert(new DefinitionService().search('ga'));
